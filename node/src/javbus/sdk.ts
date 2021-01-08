@@ -1,4 +1,7 @@
 const puppeteer = require('puppeteer');
+import fetch from 'node-fetch';
+import fs from 'fs';
+import path from 'path';
 
 (async () => {
     // const browser = await puppeteer.launch();
@@ -11,15 +14,26 @@ const puppeteer = require('puppeteer');
 
         let episodes_info = episode_panels.map(episode_panel => {
             let title = episode_panel.querySelector("span").textContent;
+            let no = episode_panel.querySelector("date").textContent;
             let src = episode_panel.querySelector("img").getAttribute('src');
-            return { title, src };
+            return { title, src, no };
         });
         return episodes_info;
     });
+    await episodes_details.forEach(async(element: any) => {
 
-    await episodes_details.forEach((element: any) => {
-
-        console.log(element.src)
+        console.log(element.no);
+        const res: any = await fetch(element.src);
+        await new Promise((resolve, reject) => {
+            const fileStream = fs.createWriteStream(path.resolve(__dirname, element.no + '.jpg'));
+            res.body.pipe(fileStream);
+            res.body.on("error", (err: any) => {
+                reject(err);
+            });
+            fileStream.on("finish", function () {
+                resolve(null);
+            });
+        });
     });
 
     await browser.close();
