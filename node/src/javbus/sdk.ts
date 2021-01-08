@@ -25,7 +25,7 @@ import path from 'path';
         console.log(element.no);
         const res: any = await fetch(element.src);
         await new Promise((resolve, reject) => {
-            const fileStream = fs.createWriteStream(path.resolve(__dirname, element.no + '.jpg'));
+            const fileStream = fs.createWriteStream(path.resolve("/tmp", element.no + '.jpg'));
             res.body.pipe(fileStream);
             res.body.on("error", (err: any) => {
                 reject(err);
