@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 import fs from 'fs';
 import path from 'path';
 
-(async () => {
+export async function saveImg(): Promise<any[]> {
     // const browser = await puppeteer.launch();
     const browser = await puppeteer.launch({ executablePath: 'chromium-browser' });
     const page = await browser.newPage();
@@ -37,4 +37,5 @@ import path from 'path';
     });
 
     await browser.close();
-})();
+    return episodes_details;
+}
