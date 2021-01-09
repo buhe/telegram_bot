@@ -2,6 +2,10 @@ const puppeteer = require('puppeteer');
 import fetch from 'node-fetch';
 import fs from 'fs';
 import path from 'path';
+import { up } from '../dropbox/sdk';
+const download = require('image-downloader')
+
+
 
 export async function saveImg(): Promise<any[]> {
     // const browser = await puppeteer.launch();
@@ -21,19 +25,28 @@ export async function saveImg(): Promise<any[]> {
         return episodes_info;
     });
     await episodes_details.forEach(async(element: any) => {
-
+        const options = {
+            url: element.src,
+            dest: path.resolve("/tmp", element.no + '.jpg')               // will be saved to /path/to/dest/image.jpg
+        }
+        const fileName = await download.image(options);
+        try {
+            await up(element.no);
+        } catch (e) {
+            console.log('上传失败');
+        }
         // console.log(element.no);
-        const res: any = await fetch(element.src);
-        await new Promise((resolve, reject) => {
-            const fileStream = fs.createWriteStream(path.resolve("/tmp", element.no + '.jpg'));
-            res.body.pipe(fileStream);
-            res.body.on("error", (err: any) => {
-                reject(err);
-            });
-            fileStream.on("finish", function () {
-                resolve(null);
-            });
-        });
+        // const res: any = await fetch(element.src);
+        // await new Promise((resolve, reject) => {
+        //     const fileStream = fs.createWriteStream(path.resolve("/tmp", element.no + '.jpg'));
+        //     res.body.pipe(fileStream);
+        //     res.body.on("error", (err: any) => {
+        //         reject(err);
+        //     });
+        //     fileStream.on("finish", function () {
+        //         resolve(null);
+        //     });
+        // });
     });
 
     await browser.close();
@@ -87,19 +100,29 @@ export async function saveSampleImg(info: any): Promise<any[]>{
         return episodes_info;
     });
     await episodes_details.forEach(async (element: any) => {
-
-        console.log(element.no);
-        const res: any = await fetch(element.src);
-        await new Promise((resolve, reject) => {
-            const fileStream = fs.createWriteStream(path.resolve("/tmp", element.no + '.jpg'));
-            res.body.pipe(fileStream);
-            res.body.on("error", (err: any) => {
-                reject(err);
-            });
-            fileStream.on("finish", function () {
-                resolve(null);
-            });
-        });
+        const options = {
+            url: element.src,
+            dest: path.resolve("/tmp", element.no + '.jpg')               // will be saved to /path/to/dest/image.jpg
+        }
+        const fileName = await download.image(options);
+        try{
+            await up(element.no);
+        }catch(e){
+            console.log('上传失败');
+        }
+        
+        // console.log(element.no);
+        // const res: any = await fetch(element.src);
+        // await new Promise((resolve, reject) => {
+        //     const fileStream = fs.createWriteStream(path.resolve("/tmp", element.no + '.jpg'));
+        //     res.body.pipe(fileStream);
+        //     res.body.on("error", (err: any) => {
+        //         reject(err);
+        //     });
+        //     fileStream.on("finish", function () {
+        //         resolve(null);
+        //     });
+        // });
     });
 
     await browser.close();
