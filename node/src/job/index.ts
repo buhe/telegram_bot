@@ -16,10 +16,7 @@ function sleep(ms: number) {
     let count = 0;
     const fileNames: any[] = await saveImg();
     fileNames.forEach(async e => {
-        if(count > 1){
-            await sleep(50000);
-            count = 0;
-        }
+        await sleep(50000 * count);
         count++;
         const samples: any[] = await saveSampleImg(e);
         // samples.forEach(async e => {
