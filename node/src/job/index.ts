@@ -17,7 +17,7 @@ function sleep(ms: number) {
     const fileNames: any[] = await saveImg();
     fileNames.forEach(async e => {
         if(count > 1){
-            sleep(50000);
+            await sleep(50000);
             count = 0;
         }
         count++;
