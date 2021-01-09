@@ -15,8 +15,8 @@ function sleep(ms: number) {
     //     });
     const fileNames: any[] = await saveImg();
     for(var i:number = 0;i<fileNames.length; i++){
-        console.log('sleep ' + (50 * i));
-        await sleep(50000 * i);
+        console.log('sleep ' + (50));
+        await sleep(50000);
         const samples: any[] = await saveSampleImg(fileNames[i]);
         // samples.forEach(async e => {
             // await up(e.no);
