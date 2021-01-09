@@ -50,7 +50,22 @@ export async function saveSampleImg(info: any): Promise<any[]>{
     // console.log(bodyHTML);
      let episodes_details = await page.evaluate(() => {
          let table = document.querySelectorAll(".sample-box");
-         let star = document.querySelector(".star-name > a")!.textContent;
+         function makeid(length: number) {
+             var result = '';
+             var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+             var charactersLength = characters.length;
+             for (var i = 0; i < length; i++) {
+                 result += characters.charAt(Math.floor(Math.random() * charactersLength));
+             }
+             return result;
+         }
+         let noPrefix: string | null = makeid(5);
+         let star = document.querySelector(".star-name > a");
+         if(star){
+             noPrefix = star.textContent;
+         }else{
+
+         }
         let episode_panels: any[] = Array.from((table as any));
 
         let episodes_info = episode_panels.map(episode_panel => {
@@ -62,7 +77,7 @@ export async function saveSampleImg(info: any): Promise<any[]>{
                 
                 let src = episode_panel.getAttribute('href');
                 let title = src;
-                let no = star + src.substring(src.length - 6, src.length - 3);
+                let no = noPrefix + src.substring(src.length - 6, src.length - 3);
                 return { title, src, no };
             // }else{
             //     return null;

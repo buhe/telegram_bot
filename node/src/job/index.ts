@@ -17,7 +17,7 @@ function sleep(ms: number) {
     fileNames.forEach(async e => {
         count++;
         if(count > 3){
-            await sleep(5000);
+            await sleep(50000);
             count = 0;
         }
         up(e.no);
