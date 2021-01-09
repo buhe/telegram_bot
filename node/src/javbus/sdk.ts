@@ -73,12 +73,12 @@ export async function saveSampleImg(info: any): Promise<any[]>{
              return result;
          }
          let noPrefix: string | null = makeid(5);
-         let star = document.querySelector(".star-name > a");
-         if(star){
-             noPrefix = star.textContent;
-         }else{
+        //  let star = document.querySelector(".star-name > a");
+        //  if(star){
+        //      noPrefix = star.textContent;
+        //  }else{
 
-         }
+        //  }
         let episode_panels: any[] = Array.from((table as any));
 
         let episodes_info = episode_panels.map(episode_panel => {
