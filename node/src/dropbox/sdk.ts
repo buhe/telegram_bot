@@ -4,7 +4,7 @@ import path = require('path');
 const accessToken: string = 'RS3fSg5C7UkAAAAAAAAAAa-WvJjmJNrpEz_8uF_YwU2wBpTgvoYacEer1nEpcgWu';
 
 const dbx = new Dropbox({ accessToken: accessToken });
-export function up(fileName: string){
+export async function up(fileName: string){
     fs.readFile(path.join('/tmp', fileName + '.jpg'), (err, contents) => {
         if (err) {
             console.log('Error: ', err);
