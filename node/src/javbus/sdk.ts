@@ -29,11 +29,12 @@ export async function saveImg(): Promise<any[]> {
             url: element.src,
             dest: path.resolve("/tmp", element.no + '.jpg')               // will be saved to /path/to/dest/image.jpg
         }
-        const fileName = await download.image(options);
+       
         try {
+            const fileName = await download.image(options);
             await up(element.no);
         } catch (e) {
-            console.log('上传失败');
+            console.log('下载或上传失败');
         }
         // console.log(element.no);
         // const res: any = await fetch(element.src);
@@ -104,11 +105,12 @@ export async function saveSampleImg(info: any): Promise<any[]>{
             url: element.src,
             dest: path.resolve("/tmp", element.no + '.jpg')               // will be saved to /path/to/dest/image.jpg
         }
-        const fileName = await download.image(options);
+        
         try{
+            const fileName = await download.image(options);
             await up(element.no);
         }catch(e){
-            console.log('上传失败');
+            console.log('下载或上传失败');
         }
         
         // console.log(element.no);
