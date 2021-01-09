@@ -13,10 +13,14 @@ function sleep(ms: number) {
     //         up(e.no);
         
     //     });
- 
+    let count = 0;
     const fileNames: any[] = await saveImg();
     fileNames.forEach(async e => {
-        
+        if(count > 1){
+            sleep(50000);
+            count = 0;
+        }
+        count++;
         const samples: any[] = await saveSampleImg(e);
         // samples.forEach(async e => {
             // await up(e.no);

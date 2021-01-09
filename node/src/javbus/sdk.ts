@@ -11,7 +11,7 @@ export async function saveImg(): Promise<any[]> {
     // const browser = await puppeteer.launch();
     const browser = await puppeteer.launch({ executablePath: 'chromium-browser' });
     const page = await browser.newPage();
-    await page.goto('https://javbus.com');
+    await page.goto('https://javbus.com', { waitUntil: 'load', timeout: 0 });
     let episodes_details = await page.evaluate(() => {
         let table = document.querySelectorAll(".item");
         let episode_panels: any[] = Array.from((table as any));
