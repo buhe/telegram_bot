@@ -21,8 +21,9 @@
     "@tsed/schema": "^6.19.1",
     "@tsed/swagger": "^6.19.1",
     "@types/node-fetch": "^2.5.7",
+    "@types/node-telegram-bot-api": "^0.51.0",
+    "@types/shelljs": "^0.8.8",
     "ajv": "^7.0.3",
-    "async": "^3.2.0",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.5",
@@ -33,7 +34,9 @@
     "image-downloader": "^4.0.2",
     "method-override": "^3.0.0",
     "node-fetch": "^2.6.1",
-    "puppeteer": "^5.5.0"
+    "node-telegram-bot-api": "^0.51.0",
+    "puppeteer": "^5.5.0",
+    "shelljs": "^0.8.4"
   },
   "devDependencies": {
     "@types/compression": "^1.7.0",

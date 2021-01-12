@@ -1,0 +1,181 @@
+
+> node@0.0.1 start /home/pi/Downloads/raspberryPi/node
+> nodemon --watch "src/**/*.ts" --ignore "node_modules/**/*" --exec ts-node src/index.ts
+
+[33m[nodemon] 2.0.6[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): src/**/*.ts[39m
+[33m[nodemon] watching extensions: ts,json[39m
+[32m[nodemon] starting `ts-node src/index.ts`[39m
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+Emitted 'error' event at:
+    at lazyFs.read (internal/fs/streams.js:165:12)
+    at FSReqWrap.wrapper [as oncomplete] (fs.js:467:17)
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! node@0.0.1 start: `nodemon --watch "src/**/*.ts" --ignore "node_modules/**/*" --exec ts-node src/index.ts`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the node@0.0.1 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/pi/.npm/_logs/2021-01-12T08_43_07_056Z-debug.log
+[36m[2021-01-12T16:43:17.587] [DEBUG] [TSED] - [39mStart server...
+[32m[2021-01-12T16:43:18.610] [INFO ] [TSED] - [39m[1mCall hook $beforeInit[22m
+[32m[2021-01-12T16:43:18.610] [INFO ] [TSED] - [39mBuild providers
+[32m[2021-01-12T16:43:18.705] [INFO ] [TSED] - [39m[1mCall hook $onInit[22m
+[32m[2021-01-12T16:43:18.705] [INFO ] [TSED] - [39m[1mCall hook $afterInit[22m
+[32m[2021-01-12T16:43:18.706] [INFO ] [TSED] - [39mMount app context
+[32m[2021-01-12T16:43:18.708] [INFO ] [TSED] - [39mMount app router
+[32m[2021-01-12T16:43:18.712] [INFO ] [TSED] - [39mLoad routes
+[32m[2021-01-12T16:43:18.713] [INFO ] [TSED] - [39m[1mCall hook $beforeRoutesInit[22m
+[32m[2021-01-12T16:43:18.726] [INFO ] [TSED] - [39m[1mCall hook $onRoutesInit[22m
+[32m[2021-01-12T16:43:18.742] [INFO ] [TSED] - [39m[1mCall hook $afterRoutesInit[22m
+[32m[2021-01-12T16:43:18.744] [INFO ] [TSED] - [39mRoutes mounted :
+[32m[2021-01-12T16:43:18.750] [INFO ] [TSED] - [39m
+┌───────────────┬────────────────────┬────────────────────────────┐
+│ Method        │ Endpoint           │ Class method               │
+│───────────────│────────────────────│────────────────────────────│
+│ [32mGET[39m           │ /rest/cpu/         │ CpuController.get()        │
+│───────────────│────────────────────│────────────────────────────│
+│ [32mGET[39m           │ /rest/hello-world/ │ HelloWorldController.get() │
+│───────────────│────────────────────│────────────────────────────│
+│ [32mGET[39m           │ /rest/             │ IndexCtrl.get()            │
+│───────────────│────────────────────│────────────────────────────│
+│ [32mGET[39m           │ /                  │ IndexCtrl.get()            │
+└───────────────┴────────────────────┴────────────────────────────┘
+[32m[2021-01-12T16:43:18.750] [INFO ] [TSED] - [39m[1mCall hook $beforeListen[22m
+[32m[2021-01-12T16:43:18.765] [INFO ] [TSED] - [39mListen server on http://0.0.0.0:8083
+[32m[2021-01-12T16:43:18.765] [INFO ] [TSED] - [39m[1mCall hook $afterListen[22m
+[32m[2021-01-12T16:43:18.766] [INFO ] [TSED] - [39m[1mCall hook $onReady[22m
+[32m[2021-01-12T16:43:18.767] [INFO ] [TSED] - [39m[default] Swagger JSON is available on http://0.0.0.0:8083/v2/docs/swagger.json
+[32m[2021-01-12T16:43:18.767] [INFO ] [TSED] - [39m[default] Swagger UI is available on http://0.0.0.0:8083/v2/docs/
+[32m[2021-01-12T16:43:18.768] [INFO ] [TSED] - [39m[default] Swagger JSON is available on http://0.0.0.0:8083/v3/docs/swagger.json
+[32m[2021-01-12T16:43:18.768] [INFO ] [TSED] - [39m[default] Swagger UI is available on http://0.0.0.0:8083/v3/docs/
+[32m[2021-01-12T16:43:18.768] [INFO ] [TSED] - [39mStarted in 1174 ms
+temp=42.8'C
+[32m[2021-01-12T16:48:05.378] [INFO ] [TSED] - [39m{ reqId: '6d0977daf1344a39a70fc7d45516a7f8',
+  method: 'GET',
+  url: '/rest/cpu',
+  duration: 17,
+  time: 2021-01-12T08:48:05.378Z,
+  event: 'request.start' }
+[32m[2021-01-12T16:48:05.744] [INFO ] [TSED] - [39m{ reqId: '6d0977daf1344a39a70fc7d45516a7f8',
+  method: 'GET',
+  url: '/rest/cpu',
+  duration: 382,
+  time: 2021-01-12T08:48:05.744Z,
+  event: 'request.end',
+  status: 200 }
+temp=42.3'C
+[32m[2021-01-12T16:49:47.304] [INFO ] [TSED] - [39m{ reqId: 'd977533ef1544d6baaff8b0b01d31fc7',
+  method: 'GET',
+  url: '/rest/cpu',
+  duration: 3,
+  time: 2021-01-12T08:49:47.304Z,
+  event: 'request.start' }
+[32m[2021-01-12T16:49:47.653] [INFO ] [TSED] - [39m{ reqId: 'd977533ef1544d6baaff8b0b01d31fc7',
+  method: 'GET',
+  url: '/rest/cpu',
+  duration: 352,
+  time: 2021-01-12T08:49:47.653Z,
+  event: 'request.end',
+  status: 200 }
+temp=42.8'C
+[32m[2021-01-12T16:49:52.208] [INFO ] [TSED] - [39m{ reqId: '34f530d5513b416eb4965f451b925594',
+  method: 'GET',
+  url: '/rest/cpu',
+  duration: 2,
+  time: 2021-01-12T08:49:52.208Z,
+  event: 'request.start' }
+[32m[2021-01-12T16:49:52.554] [INFO ] [TSED] - [39m{ reqId: '34f530d5513b416eb4965f451b925594',
+  method: 'GET',
+  url: '/rest/cpu',
+  duration: 348,
+  time: 2021-01-12T08:49:52.554Z,
+  event: 'request.end',
+  status: 200 }
+temp=41.3'C
+[32m[2021-01-12T16:50:48.821] [INFO ] [TSED] - [39m{ reqId: '5806b491e8a34c57ba6d0570db8c4cbd',
+  method: 'GET',
+  url: '/rest/cpu',
+  duration: 1,
+  time: 2021-01-12T08:50:48.821Z,
+  event: 'request.start' }
+[32m[2021-01-12T16:50:49.150] [INFO ] [TSED] - [39m{ reqId: '5806b491e8a34c57ba6d0570db8c4cbd',
+  method: 'GET',
+  url: '/rest/cpu',
+  duration: 330,
+  time: 2021-01-12T08:50:49.150Z,
+  event: 'request.end',
+  status: 200 }
+
+> node@0.0.1 start:prod /home/pi/Downloads/raspberryPi/node
+> cross-env NODE_ENV=production node dist/index.js
+
+[36m[2021-01-12T17:47:55.560] [DEBUG] [TSED] - [39mStart server...
+Tue, 12 Jan 2021 09:47:56 GMT node-telegram-bot-api deprecated Automatic enabling of cancellation of promises is deprecated.
+In the future, you will have to enable it yourself.
+See https://github.com/yagop/node-telegram-bot-api/issues/319. at internal/modules/cjs/loader.js:778:30
+[32m[2021-01-12T17:47:56.434] [INFO ] [TSED] - [39m[1mCall hook $beforeInit[22m
+[32m[2021-01-12T17:47:56.434] [INFO ] [TSED] - [39mBuild providers
+[32m[2021-01-12T17:47:56.535] [INFO ] [TSED] - [39m[1mCall hook $onInit[22m
+[32m[2021-01-12T17:47:56.535] [INFO ] [TSED] - [39m[1mCall hook $afterInit[22m
+[32m[2021-01-12T17:47:56.536] [INFO ] [TSED] - [39mMount app context
+[32m[2021-01-12T17:47:56.539] [INFO ] [TSED] - [39mMount app router
+[32m[2021-01-12T17:47:56.545] [INFO ] [TSED] - [39mLoad routes
+[32m[2021-01-12T17:47:56.545] [INFO ] [TSED] - [39m[1mCall hook $beforeRoutesInit[22m
+[32m[2021-01-12T17:47:56.564] [INFO ] [TSED] - [39m[1mCall hook $onRoutesInit[22m
+[32m[2021-01-12T17:47:56.587] [INFO ] [TSED] - [39m[1mCall hook $afterRoutesInit[22m
+[32m[2021-01-12T17:47:56.588] [INFO ] [TSED] - [39mRoutes mounted :
+[32m[2021-01-12T17:47:56.596] [INFO ] [TSED] - [39m
+┌───────────────┬────────────────────┬────────────────────────────┐
+│ Method        │ Endpoint           │ Class method               │
+│───────────────│────────────────────│────────────────────────────│
+│ [32mGET[39m           │ /rest/cpu/         │ CpuController.get()        │
+│───────────────│────────────────────│────────────────────────────│
+│ [32mGET[39m           │ /rest/hello-world/ │ HelloWorldController.get() │
+│───────────────│────────────────────│────────────────────────────│
+│ [32mGET[39m           │ /rest/javbus/      │ JavBusController.get()     │
+│───────────────│────────────────────│────────────────────────────│
+│ [32mGET[39m           │ /rest/bot/         │ TelegramController.get()   │
+│───────────────│────────────────────│────────────────────────────│
+│ [32mGET[39m           │ /rest/             │ IndexCtrl.get()            │
+│───────────────│────────────────────│────────────────────────────│
+│ [32mGET[39m           │ /                  │ IndexCtrl.get()            │
+└───────────────┴────────────────────┴────────────────────────────┘
+[32m[2021-01-12T17:47:56.596] [INFO ] [TSED] - [39m[1mCall hook $beforeListen[22m
+[32m[2021-01-12T17:47:56.611] [INFO ] [TSED] - [39mListen server on http://0.0.0.0:8083
+[32m[2021-01-12T17:47:56.612] [INFO ] [TSED] - [39m[1mCall hook $afterListen[22m
+[32m[2021-01-12T17:47:56.612] [INFO ] [TSED] - [39m[1mCall hook $onReady[22m
+[32m[2021-01-12T17:47:56.614] [INFO ] [TSED] - [39m[default] Swagger JSON is available on http://0.0.0.0:8083/v2/docs/swagger.json
+[32m[2021-01-12T17:47:56.614] [INFO ] [TSED] - [39m[default] Swagger UI is available on http://0.0.0.0:8083/v2/docs/
+[32m[2021-01-12T17:47:56.614] [INFO ] [TSED] - [39m[default] Swagger JSON is available on http://0.0.0.0:8083/v3/docs/swagger.json
+[32m[2021-01-12T17:47:56.614] [INFO ] [TSED] - [39m[default] Swagger UI is available on http://0.0.0.0:8083/v3/docs/
+[32m[2021-01-12T17:47:56.615] [INFO ] [TSED] - [39mStarted in 1047 ms
+temp=42.3'C
+[32m[2021-01-12T17:48:13.391] [INFO ] [TSED] - [39m{ reqId: '329f6a00d30a479589c2dcf3ed1cdc8c',
+  method: 'GET',
+  url: '/rest/cpu',
+  duration: 11,
+  time: 2021-01-12T09:48:13.391Z,
+  event: 'request.start' }
+[32m[2021-01-12T17:48:13.778] [INFO ] [TSED] - [39m{ reqId: '329f6a00d30a479589c2dcf3ed1cdc8c',
+  method: 'GET',
+  url: '/rest/cpu',
+  duration: 398,
+  time: 2021-01-12T09:48:13.778Z,
+  event: 'request.end',
+  status: 200 }
+error: [polling_error] {"code":"ETELEGRAM","message":"ETELEGRAM: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}
+error: [polling_error] {"code":"ETELEGRAM","message":"ETELEGRAM: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}
+error: [polling_error] {"code":"ETELEGRAM","message":"ETELEGRAM: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}
+error: [polling_error] {"code":"ETELEGRAM","message":"ETELEGRAM: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}
+error: [polling_error] {"code":"ETELEGRAM","message":"ETELEGRAM: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}
+error: [polling_error] {"code":"ETELEGRAM","message":"ETELEGRAM: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}
+error: [polling_error] {"code":"ETELEGRAM","message":"ETELEGRAM: 409 Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"}
