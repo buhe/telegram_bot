@@ -1,8 +1,6 @@
 import { Dropbox, Error, files } from 'dropbox'; // eslint-disable-line no-unused-vars
 import fs = require('fs');
-import path = require('path');
 const accessToken: string = 'RS3fSg5C7UkAAAAAAAAAAa-WvJjmJNrpEz_8uF_YwU2wBpTgvoYacEer1nEpcgWu';
-
 const dbx = new Dropbox({ accessToken: accessToken });
 export async function up(fileName: string){
     return new Promise((resolve, reject) => {
