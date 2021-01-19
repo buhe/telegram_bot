@@ -5,7 +5,7 @@ export const handleHelp = (bot: TelegramBot) => {
     // of the message
     return (msg: any) => {
         const chatId = msg.chat.id;
-        bot.sendMessage(chatId, '/cpu\n/sex');
+        bot.sendMessage(chatId, '/cpu\n/sex\n/github');
         // send back the matched "whatever" to the chat
     }
 

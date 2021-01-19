@@ -11,6 +11,8 @@
     "start:prod": "cross-env NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
+    "@octokit/rest": "^18.0.12",
+    "@octokit/types": "^6.3.2",
     "@tsed/ajv": "^6.19.1",
     "@tsed/common": "^6.19.1",
     "@tsed/core": "^6.19.1",
