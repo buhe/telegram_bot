@@ -13,12 +13,12 @@ export const handleSexImg = (bot: TelegramBot) => {
             const size = list.result.entries.length;
             const index = Math.floor(Math.random() * size);
             const path = list.result.entries[index]['path_display'];
-            console.log(path)
+            // console.log(path)
             return path;
         }).then(path => {
             return dbx.filesDownload({'path': path!})
         }).then(data => {
-            console.log(`File: ${JSON.stringify((data.result as any).fileBinary)} saved.`);
+            // console.log(`File: ${JSON.stringify((data.result as any).fileBinary)} saved.`);
             bot.sendPhoto(chatId, (data.result as any).fileBinary);
         });
         // dbx.fileRequestsListV2("/img");

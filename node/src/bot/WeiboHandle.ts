@@ -7,9 +7,13 @@ export const handleWeibo = (bot: TelegramBot) => {
     return async (msg: any) => {
         const chatId = msg.chat.id;
         const r = await getHotSearchList();
-        r.forEach(e => {
-            bot.sendMessage(chatId, e.text + ':' + e.link);
-        })
+        const index = Math.floor(Math.random() * r.length);
+        const e = r[index];
+        bot.sendMessage(chatId, e.text + ':' + e.link);
+        // r.forEach(e => {
+        //     bot.sendMessage(chatId, e.text + ':' + e.link);
+        // })
+        r
         
         // send back the matched "whatever" to the chat
     }
