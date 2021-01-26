@@ -13,6 +13,7 @@
     "stop": "pm2 stop index"
   },
   "dependencies": {
+    "@justalk/pornhub-api": "^3.4.0",
     "@octokit/rest": "^18.0.12",
     "@octokit/types": "^6.3.2",
     "@tsed/ajv": "^6.19.1",
@@ -41,6 +42,7 @@
     "method-override": "^3.0.0",
     "node-fetch": "^2.6.1",
     "node-telegram-bot-api": "^0.51.0",
+    "pornhub.js": "^0.2.4",
     "puppeteer": "^5.5.0",
     "shelljs": "^0.8.4",
     "superagent": "^6.1.0"

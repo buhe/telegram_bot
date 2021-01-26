@@ -5,6 +5,7 @@ import { handleCpu } from "./CpuHandle";
 import { handleGithub } from "./GithubHandle";
 import { handleHackews } from "./HackNewsHandle";
 import { handleHelp } from "./HelpHandle";
+import { handlePornhub } from "./PornhubHandle";
 import { handleSexImg } from "./SexImgHandle";
 import { handleWeibo } from "./WeiboHandle";
 export async function botStart()  {
@@ -15,4 +16,5 @@ export async function botStart()  {
     bot.onText(/github/, handleGithub(bot));
     bot.onText(/weibo/, handleWeibo(bot));
     bot.onText(/news/, handleHackews(bot));
+    bot.onText(/porn/, handlePornhub(bot));
 };  
