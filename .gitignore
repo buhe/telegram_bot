@@ -1,3 +1,4 @@
 node_modules/
 CMakeFiles/
 node/nohup.out
+node/src/utils/getSearchKeyword2.ts
