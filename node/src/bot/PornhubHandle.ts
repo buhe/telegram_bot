@@ -1,4 +1,5 @@
 import TelegramBot from "node-telegram-bot-api";
+import { getSearchKeyword } from "../utils/getSearchKeyword2";
 
 const PornHub = require('pornhub.js');
 const pornhub = new PornHub();
@@ -11,12 +12,12 @@ export const handlePornhub = (bot: TelegramBot) => {
         try {
 
             const res = await
-                pornhub.search('Video', 'bdsm');
+                pornhub.search('Video', getSearchKeyword());
             const videos = res.data;
             const index = Math.floor(Math.random() * videos.length);
             const video = videos[index];
             console.log(JSON.stringify(video));
-            bot.sendMessage(chatId, video['title'] + ':' + video['url'])
+            bot.sendMessage(chatId, video['url'])
             const result2 = await pornhub.video(video.url);
             const videoDownload = result2.data;
             console.log(JSON.stringify(videoDownload));
