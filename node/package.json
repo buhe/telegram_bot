@@ -13,7 +13,6 @@
     "stop": "pm2 stop index"
   },
   "dependencies": {
-    "@justalk/pornhub-api": "^3.4.0",
     "@octokit/rest": "^18.0.12",
     "@octokit/types": "^6.3.2",
     "@tsed/ajv": "^6.19.1",
@@ -28,6 +27,7 @@
     "@types/node-fetch": "^2.5.7",
     "@types/node-telegram-bot-api": "^0.51.0",
     "@types/shelljs": "^0.8.8",
+    "@types/snoowrap": "^1.19.0",
     "ajv": "^7.0.3",
     "body-parser": "^1.19.0",
     "cheerio": "^1.0.0-rc.5",
@@ -45,6 +45,7 @@
     "pornhub.js": "^0.2.4",
     "puppeteer": "^5.5.0",
     "shelljs": "^0.8.4",
+    "snoowrap": "^1.22.0",
     "superagent": "^6.1.0"
   },
   "devDependencies": {
