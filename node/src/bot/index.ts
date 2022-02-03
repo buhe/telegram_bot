@@ -18,5 +18,5 @@ export async function botStart()  {
     bot.onText(/news/, handleHackews(bot));
     bot.onText(/porn/, handlePornhub(bot));
 
-    // bot.sendMessage();
+    bot.sendMessage("1470773716", "test");
 };  

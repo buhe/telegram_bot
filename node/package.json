@@ -7,10 +7,9 @@
     "build": "yarn tsc",
     "tsc": "tsc --project tsconfig.compile.json",
     "tsc:w": "tsc --project tsconfig.json -w",
-    "start": "nodemon --watch \"src/**/*.ts\" --ignore \"node_modules/**/*\" --exec ts-node src/index.ts",
-    "start:prod": "cross-env NODE_ENV=production node dist/index.js",
-    "pm": "pm2 start dist/index.js",
-    "stop": "pm2 stop index"
+    "start": "pm2 start dist/index.js",
+    "stop": "pm2 stop index",
+    "prestart": "npm run tsc"
   },
   "dependencies": {
     "@octokit/rest": "^18.0.12",
