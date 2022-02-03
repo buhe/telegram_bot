@@ -17,4 +17,6 @@ export async function botStart()  {
     bot.onText(/weibo/, handleWeibo(bot));
     bot.onText(/news/, handleHackews(bot));
     bot.onText(/porn/, handlePornhub(bot));
+
+    // bot.sendMessage();
 };  

@@ -7,7 +7,7 @@ export const handleCpu = (bot: TelegramBot ) => {
     return (msg: any) =>{
         const chatId = msg.chat.id;
         const temp: string = exec("/opt/vc/bin/vcgencmd measure_temp"); // the captured "whatever"
-        bot.sendMessage(chatId, temp.toString());
+        bot.sendMessage(chatId, temp.toString() + "_" + chatId);
     // send back the matched "whatever" to the chat
     }
 
