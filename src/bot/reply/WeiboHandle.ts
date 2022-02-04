@@ -1,5 +1,5 @@
 import TelegramBot from "node-telegram-bot-api";
-import { getHotSearchList } from "../weibo/sdk";
+import { getHotSearchList } from "../../weibo/sdk";
 export const handleWeibo = (bot: TelegramBot) => {
     // 'msg' is the received Message from Telegram
     // 'match' is the result of executing the regexp above on the text content
