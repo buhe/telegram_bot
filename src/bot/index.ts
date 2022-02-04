@@ -22,7 +22,7 @@ export async function botStart()  {
     bot.onText(/porn/, handlePornhub(bot));
 
     const job = schedule.scheduleJob("*/5 * * * *", function () {
-        // handleTest(bot, "1470773716");
+        handleTest(bot, "1470773716");
     });
 
     process.on('SIGINT', function () {
