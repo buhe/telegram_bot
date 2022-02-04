@@ -48,7 +48,8 @@
     "puppeteer": "^5.5.0",
     "shelljs": "^0.8.4",
     "snoowrap": "^1.22.0",
-    "superagent": "^6.1.0"
+    "superagent": "^6.1.0",
+    "yahoo-stock-prices": "^1.1.0"
   },
   "devDependencies": {
     "@types/compression": "^1.7.0",
