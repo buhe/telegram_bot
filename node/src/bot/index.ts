@@ -24,4 +24,8 @@ export async function botStart()  {
     const job = schedule.scheduleJob("*/5 * * * *", function () {
         handleTest(bot, "1470773716");
     });
+
+    process.on('SIGINT', function () {
+        job.cancel();
+    });
 };  
