@@ -4,7 +4,7 @@ export const handleTest = (bot: TelegramBot,id: string) => {
 
     
     const hass = new HomeAssistant({
-        host: 'http://192.168.31.16/',
+        host: 'http://192.168.31.16',
 
         // Your Home Assistant port number
         // Optional, defaults to 8123
