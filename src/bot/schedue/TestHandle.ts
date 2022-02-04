@@ -11,7 +11,7 @@ export const handleTest = async (bot: TelegramBot,id: string) => {
     const status = JSON.stringify(await hass.status());
     // console.log(status);
     if(old != status) {
-        bot.sendMessage(id, status);
+        bot.sendMessage(id, "ha_" + status);
         old = status;
     }
 }
