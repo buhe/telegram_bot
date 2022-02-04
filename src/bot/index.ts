@@ -2,13 +2,13 @@ import TelegramBot from "node-telegram-bot-api";
 const token = '1564411909:AAFQNbZAskm-aH_-hsjmHjJL8E1Vlr75j74';
 const bot: TelegramBot = new TelegramBot(token, { polling: true });
 import schedule from "node-schedule";
-import { handleCpu } from "./CpuHandle";
-import { handleGithub } from "./GithubHandle";
-import { handleHackews } from "./HackNewsHandle";
-import { handleHelp } from "./HelpHandle";
-import { handlePornhub } from "./PornhubHandle";
-import { handleSexImg } from "./SexImgHandle";
-import { handleWeibo } from "./WeiboHandle";
+import { handleCpu } from "./reply/CpuHandle";
+import { handleGithub } from "./reply/GithubHandle";
+import { handleHackews } from "./reply/HackNewsHandle";
+import { handleHelp } from "./reply/HelpHandle";
+import { handlePornhub } from "./reply/PornhubHandle";
+import { handleSexImg } from "./reply/SexImgHandle";
+import { handleWeibo } from "./reply/WeiboHandle";
 
 import { handleTest } from "./schedue/TestHandle";
 export async function botStart()  {

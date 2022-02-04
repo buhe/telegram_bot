@@ -1,5 +1,5 @@
 import TelegramBot from "node-telegram-bot-api";
-import { getSearchKeyword } from "../utils/getSearchKeyword";
+import { getSearchKeyword } from "../../utils/getSearchKeyword";
 
 const PornHub = require('pornhub.js');
 const pornhub = new PornHub();
