@@ -11,17 +11,19 @@ export const handleGithub = (bot: TelegramBot) => {
             octokit.users.listFollowingForUser({ username: 'buhe', per_page: 10});
         // console.log(JSON.stringify(orgs));
         
-        await users.data.forEach(async u => {
+        users.data.forEach(async (u) => {
             // console.log(u!.login)
             let names = '';
             const orgs = await octokit.activity.listReposStarredByUser({
                 username: u!.login,
                 per_page: 1
             });
-            
-            orgs.data.forEach(o => {
-                names = names + o.html_url;
-            });
+
+            // orgs.data.forEach(o => {
+            //     if (o.html_url) {
+            //         names = names + o.html_url;
+            //     }
+            // });
             bot.sendMessage(chatId, names);
             // console.log(names);
         })

@@ -21,8 +21,8 @@ export async function botStart()  {
     bot.onText(/news/, handleHackews(bot));
     bot.onText(/porn/, handlePornhub(bot));
 
-    const job = schedule.scheduleJob("*/5 * * * *", function () {
-        handleTest(bot, "1470773716");
+    const job = schedule.scheduleJob("*/5 * * * *", async function () {
+        await handleTest(bot, "1470773716");
     });
 
     process.on('SIGINT', function () {
