@@ -11,7 +11,7 @@ import { handleSexImg } from "./reply/SexImgHandle";
 import { handleWeibo } from "./reply/WeiboHandle";
 
 import { handleTest } from "./schedue/TestHandle";
-import { handleStock } from "./schedue/StockHandle";
+// import { handleStock } from "./schedue/StockHandle";
 export async function botStart()  {
     bot.onText(/cpu/, handleCpu(bot));
     bot.onText(/sex/, handleSexImg(bot));
@@ -24,7 +24,7 @@ export async function botStart()  {
 
     const job = schedule.scheduleJob("*/5 * * * *", async function () {
         await handleTest(bot, "1470773716");
-        await handleStock(bot, "1470773716");
+        // await handleStock(bot, "1470773716");
     });
 
     process.on('SIGINT', function () {
