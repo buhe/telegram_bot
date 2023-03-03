@@ -1,5 +1,5 @@
 import TelegramBot from "node-telegram-bot-api";
-const token = '1564411909:AAFQNbZAskm-aH_-hsjmHjJL8E1Vlr75j74';
+const token = '6255886810:AAEzmaKcIZ8Wn3F6JJ4N-GUl_smBR-Vn4YU';
 const bot: TelegramBot = new TelegramBot(token, { polling: true });
 import schedule from "node-schedule";
 import { handleCpu } from "./reply/CpuHandle";
