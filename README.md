@@ -1,4 +1,6 @@
-## An telegram bot project based on Ts.ED framework
+## My telegram bot
+
+### Compile and using pm2 start
 
 ```
 npm run start
