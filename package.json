@@ -44,7 +44,7 @@
     "node-fetch": "^2.6.1",
     "node-schedule": "^2.1.0",
     "node-telegram-bot-api": "^0.51.0",
-    "pornhub.js": "^0.2.4",
+    "pornhub.js": "1.2.0",
     "puppeteer": "^5.5.0",
     "shelljs": "^0.8.4",
     "snoowrap": "^1.22.0",
