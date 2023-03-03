@@ -1,6 +1,6 @@
 import TelegramBot from "node-telegram-bot-api";
 import { Octokit } from "@octokit/rest";
-const octokit = new Octokit({ auth: 'ccf1c7d9cea9e29b6fd8b7432c71d88e1950e201'});
+const octokit = new Octokit({ auth: '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'});
 export const handleGithub = (bot: TelegramBot) => {
     // 'msg' is the received Message from Telegram
     // 'match' is the result of executing the regexp above on the text content
