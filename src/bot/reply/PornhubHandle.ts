@@ -12,16 +12,16 @@ export const handlePornhub = (bot: TelegramBot) => {
     return async (msg: any) => {
         const chatId = msg.chat.id;
         try {
-
-            const res = await
-                pornhub.search('Video', getSearchKeyword());
-            const videos = res.data;
-            const index = Math.floor(Math.random() * videos.length);
-            const video = videos[index];
+            const res = await pornhub.searchVideo(getSearchKeyword())
+            // const res = await
+            //     pornhub.search('Video', getSearchKeyword());
+            // const videos = res.data;
+            const index = Math.floor(Math.random() * res.data.length);
+            const video = res.data[index];
             console.log(JSON.stringify(video));
-            bot.sendMessage(chatId, video['url'])
+            bot.sendMessage(chatId, video.url)
             const result2 = await pornhub.video(video.url);
-            const videoDownload = result2.data;
+            const videoDownload = result2
             console.log(JSON.stringify(videoDownload));
             bot.sendVideo(chatId, videoDownload.videos[0].url);
         } catch (e) {
