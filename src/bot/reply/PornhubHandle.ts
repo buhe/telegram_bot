@@ -1,7 +1,9 @@
 import TelegramBot from "node-telegram-bot-api";
 import { getSearchKeyword } from "../../utils/getSearchKeyword";
 
-const PornHub = require('pornhub.js');
+import { PornHub } from 'pornhub.js'
+// const { PornHub } = require('pornhub.js')
+// const pornhub = new PornHub()
 const pornhub = new PornHub();
 export const handlePornhub = (bot: TelegramBot) => {
     // 'msg' is the received Message from Telegram
